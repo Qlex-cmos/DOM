@@ -50,3 +50,14 @@ btn2.addEventListener("click", () => {
 
 //-----------------------------------------------------------------
 //   -> 58:20 ordre de priorité
+// Ordre de priorité en CSS (+ vers -):
+// ! important >> style dans <div> >> #id >> .class >> baliseHTML
+
+//**** MOUSE EVENTS ***//
+
+const mousemove = document.querySelector(".mousemove");
+
+window.addEventListener("mousemove", (e) => {
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px";
+});

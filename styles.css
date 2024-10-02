@@ -39,3 +39,12 @@ p {
   opacity: 1;
   transform: translateX(0);
 }
+
+.mousemove {
+  height: 50px;
+  width: 50px;
+  border: 2px solid pink;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+}
