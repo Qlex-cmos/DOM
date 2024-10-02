@@ -61,3 +61,16 @@ window.addEventListener("mousemove", (e) => {
   mousemove.style.left = e.pageX + "px";
   mousemove.style.top = e.pageY + "px";
 });
+
+//*** MOUSE DOWN ***//
+window.addEventListener("mousedown", () => {
+  mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+  mousemove.style.border = "2px solid pink";
+});
+
+window.addEventListener("mouseup", () => {
+  mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+  mousemove.style.border = "2px solid teal";
+});
+
+//1:24:50 : Mouse Enter -> quand la souris survole une zone (différent du hover)

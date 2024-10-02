@@ -5,10 +5,11 @@
 }
 
 body {
-  text-align: center; // centrer le texte
+  text-align: center; /*centrer le texte */
   margin: 0;
   color: white;
   min-height: 200vh;
+  overflow-x: hidden; /*permet d'empêcher la souris de casser la page si elle sort du cadre*/
 }
 
 .box {
@@ -47,4 +48,6 @@ p {
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50px;
+  /* transition: 0.01s ease; */
+  z-index: -1;
 }
