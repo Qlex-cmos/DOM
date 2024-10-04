@@ -73,4 +73,24 @@ window.addEventListener("mouseup", () => {
   mousemove.style.border = "2px solid teal";
 });
 
-//1:24:50 : Mouse Enter -> quand la souris survole une zone (différent du hover)
+//Mouse Enter -> quand la souris survole une zone (différent du hover)
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "rgba(0,0,0,0.6)";
+});
+
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "pink";
+});
+
+response.addEventListener("mouseover", () => {
+  response.style.transform = "rotate(2deg)";
+});
+
+//-----------------------------------------------------------------
+//*** KEYPRESS ***//
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+});
