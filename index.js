@@ -93,4 +93,24 @@ const key = document.getElementById("key");
 
 document.addEventListener("keypress", (e) => {
   key.textContent = e.key;
+
+  if (e.key === "j") {
+    keypressContainer.style.background = "green";
+  } else if (e.key === "r") {
+    keypressContainer.style.background = "yellow";
+  } else {
+    keypressContainer.style.background = "blue";
+  }
+
+  // ring(e.key);
 });
+
+//*** Effet sonore ***//
+// const ring = (key) => {
+//   const audio = new Audio();
+//   audio.src = key + ".mp3";
+//   audio.play();
+// }
+// ring(e.key);
+
+//01:48:51 fin de effet sonore
