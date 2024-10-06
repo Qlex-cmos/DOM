@@ -128,3 +128,15 @@ window.addEventListener("scroll", () => {
     nav.style.top = "-50px";
   }
 });
+
+//---------------------------------------------------------------------
+///*** INPUTS & FORM EVENTS ***//
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+let pseudo = "";
+
+console.log(select);
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
