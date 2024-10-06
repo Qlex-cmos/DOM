@@ -114,3 +114,17 @@ document.addEventListener("keypress", (e) => {
 // ring(e.key);
 
 //01:48:51 fin de effet sonore
+
+//-----------------------------------------------------------------------
+//*** SCROLL EVENTS ***//
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  //console.log(window.scrollY);
+  if (window.scrollY > 120) {
+    nav.style.top = 0;
+  } else {
+    nav.style.top = "-50px";
+  }
+});
