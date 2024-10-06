@@ -133,10 +133,32 @@ window.addEventListener("scroll", () => {
 ///*** INPUTS & FORM EVENTS ***//
 const inputName = document.querySelector('input[type="text"]');
 const select = document.querySelector("select");
+const form = document.querySelector("form");
 let pseudo = "";
-
-console.log(select);
+let language = "";
 
 inputName.addEventListener("input", (e) => {
   pseudo = e.target.value;
 });
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // pour empêcher le rechargement de la page
+
+  // console.log(cgv.checked);
+
+  if (cgv.checked) {
+    // Affiche le contenu des variables
+    document.querySelector("form > div").innerHTML = `
+      <h3>Pseudo : ${pseudo} </h3>
+      <h4>Langage préféré : ${language} </h4>
+      `;
+  } else {
+    alert("Veuillez accepter les CGV");
+  }
+});
+
+// 02:27:23
