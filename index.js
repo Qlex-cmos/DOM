@@ -184,8 +184,28 @@ boxes.forEach((box) => {
 
 //--------------------------------------------------
 // 2 façons de faire des eventListeners ->
-// addEventListener VS onClick
+// addEventListener VS onClick (défaut du on-click: on ne peut déclarer qu'un seul event, il écrase les précédents si on fait plusieurs onClick successifs)
 
-document.body.onclick = function () {
-  console.log("Click!");
-};
+// document.body.onclick = function () {
+//   console.log("Click!");
+// };
+
+// Bubbling => fin (de base l'eventListener est paramétré en mode bubbling)
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 1 !");
+  },
+  false
+);
+
+// Usecapture => en début
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 2 !");
+  },
+  true
+);
+
+//02:50:40
