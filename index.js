@@ -161,4 +161,31 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// 02:27:23
+//---------------------------------------------------
+// *** Load events ***//
+window.addEventListener("load", () => {
+  // console.log("document chargé");
+});
+
+//----------------------------------------------------
+//*** FOR EACH ***//
+// const boxes = document.getElementsByClassName("box");
+// console.log(boxes);
+
+const boxes = document.querySelectorAll(".box");
+
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
+});
+
+//--------------------------------------------------
+// 2 façons de faire des eventListeners ->
+// addEventListener VS onClick
+
+document.body.onclick = function () {
+  console.log("Click!");
+};
