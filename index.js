@@ -208,4 +208,60 @@ document.body.addEventListener(
   true
 );
 
-//02:50:40
+//----------------------------------------------------------
+//*** STOP PROPAGATION ***//
+
+// questionContainer.addEventListener("click", (e) => {
+//   alert("Test!");
+//   e.stopPropagation();
+// });
+
+//removeEventlistener -> cette méthode existe pour supprimer un écouteur d'events
+
+//----------------------------------------------
+//*** BOM : Browser object model ***//
+
+// console.log(window.innerHeight);
+// console.log(window.scrollY);
+
+// window.open("http://google.com", "cours js", "height=600");
+// window.close();
+
+// Evénements adossés à window
+// -> alert("hello");
+// -> confirm
+// -> prompt
+
+btn2.addEventListener("click", () => {
+  confirm("Voulez-vous vraiment vous tromper?");
+});
+
+// let answer;
+
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom !");
+
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
+  // += pour ne pas écraser tout ce qu'il y a avant
+});
+
+//*** TIMER, COMPTE A REBOURS ***//
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+let interval = setInterval(() => {
+  document.body.innerHTML += `
+  <div class='box'>
+    <h2>Nouvelle box</h2>
+  </div>
+  `;
+}, 5000);
+
+// Pour stopper l'inerval (1er etape : contenir le setInterval dans une variable puis en dessous) et pour supprimer au click un élément de la page
+document.body.addEventListener("click", (e) => {
+  e.target.remove();
+  clearInterval(interval);
+});
+
+// LOCATION
