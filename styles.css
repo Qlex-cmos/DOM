@@ -61,6 +61,19 @@ nav {
   transition: 0.4s;
 }
 
+nav::after {
+  content: "";
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.822),
+    transparent
+  );
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 ul {
   display: flex;
   align-items: center;

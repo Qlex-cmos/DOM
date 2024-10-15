@@ -174,7 +174,7 @@ window.addEventListener("load", () => {
 
 const boxes = document.querySelectorAll(".box");
 
-console.log(boxes);
+// console.log(boxes);
 
 boxes.forEach((box) => {
   box.addEventListener("click", (e) => {
@@ -191,22 +191,22 @@ boxes.forEach((box) => {
 // };
 
 // Bubbling => fin (de base l'eventListener est paramétré en mode bubbling)
-document.body.addEventListener(
-  "click",
-  () => {
-    console.log("click 1 !");
-  },
-  false
-);
+// document.body.addEventListener(
+//   "click",
+//   () => {
+//     console.log("click 1 !");
+//   },
+//   false
+// );
 
-// Usecapture => en début
-document.body.addEventListener(
-  "click",
-  () => {
-    console.log("click 2 !");
-  },
-  true
-);
+// // Usecapture => en début
+// document.body.addEventListener(
+//   "click",
+//   () => {
+//     console.log("click 2 !");
+//   },
+//   true
+// );
 
 //----------------------------------------------------------
 //*** STOP PROPAGATION ***//
@@ -250,18 +250,41 @@ setTimeout(() => {
   questionContainer.style.borderRadius = "300px";
 }, 2000);
 
-let interval = setInterval(() => {
-  document.body.innerHTML += `
-  <div class='box'>
-    <h2>Nouvelle box</h2>
-  </div>
-  `;
-}, 5000);
+// let interval = setInterval(() => {
+//   document.body.innerHTML += `
+//   <div class='box'>
+//     <h2>Nouvelle box</h2>
+//   </div>
+//   `;
+// }, 50000);
 
 // Pour stopper l'inerval (1er etape : contenir le setInterval dans une variable puis en dessous) et pour supprimer au click un élément de la page
-document.body.addEventListener("click", (e) => {
-  e.target.remove();
-  clearInterval(interval);
-});
+// document.body.addEventListener("click", (e) => {
+//   e.target.remove();
+//   clearInterval(interval);
+// });
 
 // LOCATION
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+// location.replace("http://lequipe.fr"); rediriger vers un autre lien
+
+// window.onload = () => {
+//   location.href = "http://x.com";
+// };
+
+// NAVIGATOR //
+// console.log(navigator.userAgent);
+
+// Geolocalisation
+
+// HISTORY
+// console.log(history);
+// window.history.back();
+// history.go(-2);
+
+//*** SET PROPERTY ***//
+
+// 03:29:00
