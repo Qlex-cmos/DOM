@@ -286,5 +286,6 @@ setTimeout(() => {
 // history.go(-2);
 
 //*** SET PROPERTY ***//
-
-// 03:29:00
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+});
