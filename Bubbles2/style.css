@@ -1,0 +1,11 @@
+body {
+  overflow: hidden;
+  cursor: crosshair;
+  min-height: 100vh;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 300px;
+  color: yellow;
+}
