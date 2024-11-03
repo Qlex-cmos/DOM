@@ -8,4 +8,17 @@ body {
   position: absolute;
   border-radius: 300px;
   background: yellow;
+  opacity: 0;
+  animation: anim 8s forwards;
+  filter: hue-rotate(0deg);
+}
+
+/* on ne peut pas injecter qqchose dans une keyframe à partir de JS */
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(360deg);
+  }
 }
